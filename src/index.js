@@ -38,20 +38,20 @@ function imitationApi(country) {
 			population: "46000000",
 			languages: "Ukrainian"
 		},
-		{
-			name: "Great Britian",
-			src: "https://cdn.britannica.com/25/4825-050-977D8C5E/Flag-United-Kingdom.jpg",
-			capital: "London",
-			population: "55000000",
-			languages: "English"
-		},
-		{
-			name: "Poland",
-			src: "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/800px-Flag_of_Poland.svg.png",
-			capital: "Wrazlav",
-			population: "36000000",
-			languages: "Polish"
-		},
+		// {
+		// 	name: "Great Britian",
+		// 	src: "https://cdn.britannica.com/25/4825-050-977D8C5E/Flag-United-Kingdom.jpg",
+		// 	capital: "London",
+		// 	population: "55000000",
+		// 	languages: "English"
+		// },
+		// {
+		// 	name: "Poland",
+		// 	src: "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/800px-Flag_of_Poland.svg.png",
+		// 	capital: "Wrazlav",
+		// 	population: "36000000",
+		// 	languages: "Polish"
+		// },
 	];	
 	return countryGlobalTest;
 };
@@ -102,7 +102,7 @@ function workWithResultFromApi(countryName) {
        	 <img src=${src} alt="" width="50px" />
       	  <p style="font-size: 40px"><b>${name}</b></p>
     	 	 </div>
-     		 <ul>
+     		 <ul style="padding: 0;list-style: none;">
         		<li><b>Capital:</b> ${capital}</li>
        		 <li><b>Population:</b> ${population}</li>
        		 <li><b>Languages:</b> ${languages}</li>
