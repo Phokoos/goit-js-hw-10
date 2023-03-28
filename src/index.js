@@ -5,7 +5,8 @@ import debounce from 'lodash.debounce';
 // Import Notiflix
 import Notiflix from 'notiflix';
 
-import {fetchCountries} from './js/fetchCountries.js';
+import { fetchCountries } from './js/fetchCountries.js';
+
 
 // find field with input#search-box
 
@@ -53,7 +54,7 @@ function workWithResultFromApi(countryName) {
 }
 
 const checkResult = (countryName) => {
-	classApi = new fetchCountries;
+	const classApi = new fetchCountries;
 	classApi.fetchCountries(countryName)
 		.then((data) => {
 			workWithUserInterface(data);

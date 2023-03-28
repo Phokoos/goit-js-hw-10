@@ -9,7 +9,6 @@ export class fetchCountries {
 			.then(
 				res => {
 					if (res.status === 404) {
-						// return res.json();
 						return res.status;
 					}
 
