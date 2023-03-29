@@ -5,6 +5,13 @@ import debounce from 'lodash.debounce';
 // Import Notiflix
 import Notiflix from 'notiflix';
 
+// Noriflix settings
+Notiflix.Notify.init({
+	width: '500px',
+	position: 'left-top',
+	fontSize: '20px',
+})
+
 import { fetchCountries } from './js/fetchCountries.js';
 
 
@@ -68,6 +75,8 @@ const checkResult = (countryName) => {
 function workWithUserInterface(data) {
 	const countryArrayLength = data.length;
 
+
+	// Catch 404 error
 	if (data === 404) {
 		return Notiflix.Notify.failure('Oops, there is no country with that name');
 	}
