@@ -45,17 +45,20 @@ function addHtmlCode() {
 	const inputValue = inputFieldEl.value.trim()
 
 	if (inputValue === "") {
-		countryListEl.innerHTML = "";
-		countryDivEl.innerHTML = "";
+		cleanMarkup();
 
 		return Notiflix.Notify.success('Empry field');;
 	}
 	workWithResultFromApi(inputValue);
 }
 
-function workWithResultFromApi(countryName) {
+function cleanMarkup() {
 	countryListEl.innerHTML = "";
 	countryDivEl.innerHTML = "";
+}
+
+function workWithResultFromApi(countryName) {
+	cleanMarkup();
 
 	checkResult(countryName);
 }
@@ -102,7 +105,7 @@ function workWithUserInterface(data) {
      		 <ul style="padding: 0;list-style: none;">
         		<li><b>Capital:</b> ${capital}</li>
        		 <li><b>Population:</b> ${population}</li>
-       		 <li><b>Languages:</b> ${Object.values(languages)}</li>
+       		 <li><b>Languages:</b> ${Object.values(languages).join(", ")}</li>
       	</ul>`
 		
 		).join("");
